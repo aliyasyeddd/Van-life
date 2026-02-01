@@ -9,12 +9,19 @@ export default function Vans() {
       .then((data) => setVans(data.vans));
   }, []);
 
+  //a button as another interactive element, it becomes a bit more difficult for a keyboard user to drill down and access specifically that
+  //button as opposed to the anchor that is wrapping everything
+  //Simply enough, we can add an aria label to our link element so that we can indicate to the screen reader exactly what will happen if this link is clicked.
   const vanElements = vans.map((van) => (
     <div key={van.id} className="van-tile">
-      <Link to={`/vans/${van.id}`}>
+      <Link
+        to={`/vans/${van.id}`}
+        aria-label={`View details for ${van.name}, 
+                             priced at $${van.price} per day`}
+      >
         <img src={van.imageUrl} />
         <div className="van-info">
-          <h3>{van.name}</h3>
+          <p>{van.name}</p>
           <p>
             ${van.price}
             <span>/day</span>
