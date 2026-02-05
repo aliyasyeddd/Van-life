@@ -5,14 +5,15 @@ import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
 import Vans from "./pages/Vans/Vans.jsx";
 import VanDetail from "./pages/Vans/VanDetail.jsx";
+import Login from "./pages/Login";
 import Dashboard from "./pages/Host/Dashboard.jsx";
 import Income from "./pages/Host/Income.jsx";
 import Reviews from "./pages/Host/Reviews.jsx";
 import HostVans from "./pages/Host/HostVans.jsx";
 import HostVanDetail from "./pages/Host/HostVanDetail.jsx";
-import HostVanInfo from "./pages/Host/HostVanInfo"
-import HostVanPricing from "./pages/Host/HostVanPricing"
-import HostVanPhotos from "./pages/Host/HostVanPhotos"
+import HostVanInfo from "./pages/Host/HostVanInfo";
+import HostVanPricing from "./pages/Host/HostVanPricing";
+import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import NotFound from "./pages/NotFound.jsx";
 import Layout from "./components/Layout.jsx";
 import HostLayout from "./components/HostLayout.jsx";
@@ -29,6 +30,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
+          <Route path="login" element={<Login />} />
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
