@@ -160,7 +160,18 @@ header .login-link {
 
 /*** ABOUT PAGE ***/
 .about-hero-image {
+    width: 100%;
+    display: block;
     max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1024px) {
+    .about-hero-image {
+        height: 460px;
+        object-fit: cover;
+        object-position: center 40%;
+    }
 }
 
 .about-page-content {
